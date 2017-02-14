@@ -5,6 +5,10 @@
         {
             $cash = explode('.', $something);
             $cash = $cash[1];
+            if(strlen($cash)===1){
+              $cash = $cash . "0";
+
+            }
 
             $totalCoins = 0;
             $remainQ = $cash%25;//15
