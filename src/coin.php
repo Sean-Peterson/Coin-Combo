@@ -1,5 +1,5 @@
 <?php
-    class Ana
+    class Coin
     {
         function CoinCombo($something)
         {
@@ -23,22 +23,8 @@
             $pennies = ($remainN-$remainP)/1;
             $totalCoins += $pennies;
 
-            return $totalCoins . " Coins";
+            return array("total"=>$totalCoins, "quarters"=>$quarters, "dimes"=>$dimes, "nickles"=>$nickles, "pennies"=>$pennies);
         }
     }
 
 ?>
-
-
-<!-- 90
-
-90-25
-65-25
-40-25
-15-10
-5-5
-
-90/25%
-equals 3.7474983489
-add 3 to quarters
-15/10 -->

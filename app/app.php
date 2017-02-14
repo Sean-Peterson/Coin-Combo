@@ -16,10 +16,8 @@
     });
 
     $app->post("/new", function() use ($app) {
-        $newAnagram = new Ana();
-        $searchValues = explode(", ", $_POST['userValues']);
-        // var_dump($searchValues);
-        $result = $newAnagram->AnagramChecker($_POST["userInput"], $searchValues);
+        $newAnagram = new Coin();
+        $result = $newAnagram->CoinCombo($_POST["userInput"]);
         return $app["twig"]->render("result.html.twig", array("result"=>$result));
     });
 
