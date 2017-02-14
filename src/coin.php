@@ -3,12 +3,11 @@
     {
         function CoinCombo($something)
         {
-            $cash = explode('.', $something);
+            $cash = floatval($something);
+            $cash = floor(($cash*100))/100;
+            $cash = strval($cash);
+            $cash = explode('.', $cash);
             $cash = $cash[1];
-            if(strlen($cash)===1){
-              $cash = $cash . "0";
-
-            }
 
             $totalCoins = 0;
             $remainQ = $cash%25;//15

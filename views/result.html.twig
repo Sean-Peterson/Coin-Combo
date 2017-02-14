@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
         <meta charset="utf-8">
-        <title>Anagram</title>
+        <title>Yo Change</title>
     </head>
     <body>
-        <h1>Anagram</h1>
+        <h1>Here's your change ;)</h1>
         <ul>
-          <li>Quarters: {{result["quarters"]}}</li>
-          <li>Dimes: {{result["dimes"]}}</li>
-          <li>Nickles: {{result["nickles"]}}</li>
-          <li>Pennies: {{result["pennies"]}}</li>
-          <li>Total Coins: {{result["total"]}}</li>
+          <li>
+            {% if result["quarters"] != 0 %}
+              {% for i in 1..result["quarters"]%}
+                <img src="img/quarter.jpg">
+              {% endfor %}
+            {% endif %}
+          </li>
+          <li>
+            {% if result["dimes"] != 0 %}
+              {% for i in 1..result["dimes"]%}
+                <img src="img/dime.png">
+              {% endfor %}
+            {% endif %}
+          </li>
+          <li>
+            {% if result["nickles"] != 0 %}
+              {% for i in 1..result["nickles"]%}
+                <img src="img/nickle.jpg">
+              {% endfor %}
+            {% endif %}
+          </li>
+          <li>
+            {% if result["pennies"] != 0 %}
+              {% for i in 1..result["pennies"]%}
+                <img src="img/penny.png">
+              {% endfor %}
+            {% endif %}
+          </li>
         </ul>
     </body>
 </html>
